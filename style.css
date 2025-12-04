@@ -181,3 +181,7 @@ footer {
     z-index: -1;
     pointer-events: none;
 }
+body{
+  margin: 0%;
+  padding: 0%;
+}
