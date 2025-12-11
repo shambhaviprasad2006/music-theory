@@ -1,83 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music Theory Basics</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Music Theory Basics</title>
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <header>
-        <h1>Music Theory Basics</h1>
-    </header>
+<div class="header">
+<h1>Music Theory Basics</h1>
+</div>
 
-    <nav>
-        <button onclick="showSection('home')">Home</button>
-        <button onclick="showSection('notes')">Notes</button>
-        <button onclick="showSection('scales')">Scales</button>
-        <button onclick="showSection('chords')">Chords</button>
-    </nav>
+<div class="navbar">
+<button onclick="showContent('home')">Home</button>
+<button onclick="showContent('notes')">Notes</button>
+<button onclick="showContent('scales')">Scales</button>
+<button onclick="showContent('chords')">Chords</button>
+</div>
 
-    <main>
-        <section id="home" class="active">
-            <h2>Welcome!</h2>
-            <img src="hero_image.png" alt="Music Theory Abstract" class="hero-img">
-            <p>Welcome to Music Theory Basics! This site is designed to help beginners understand the fundamental
-                building blocks of music.</p>
-            <p>Click on the navigation buttons above to start learning about Notes, Scales, and Chords.</p>
-            <button class="action-btn" id="highlight-btn">Highlight This Section</button>
-        </section>
+<div class="container">
+<div id="home" class="content-section show">
+<h2>Welcome to Music Theory</h2>
+<p>This website will help you learn the basic concepts of music theory. Navigate through different sections using the buttons above.</p>
+<p>Start your musical journey by exploring notes, scales, and chords!</p>
+</div>
 
-        <section id="notes">
-            <h2>Musical Notes</h2>
-            <p>Music is written using a set of letters called the musical alphabet. These letters represent different
-                pitches.</p>
-            <ul>
-                <li>The musical alphabet consists of 7 letters: <strong>A, B, C, D, E, F, G</strong>.</li>
-                <li>After G, we go back to A (but at a higher pitch).</li>
-            </ul>
-            <p>Try it yourself!</p>
-            <button class="action-btn" id="random-note-btn">Show Random Musical Note</button>
-            <span id="random-note-display">?</span>
-        </section>
+<div id="notes" class="content-section">
+<h2>Musical Notes</h2>
+<p>The musical alphabet has 7 letters that repeat in a pattern.</p>
+<ul>
+<li>A, B, C, D, E, F, G</li>
+<li>After G, the pattern starts again from A at a higher pitch</li>
+<li>These notes form the foundation of all music</li>
+</ul>
+<button class="btn" onclick="getRandomNote()">Random Note</button>
+<p id="noteDisplay"></p>
+</div>
 
-        <section id="scales">
-            <h2>Major Scales</h2>
-            <p>A scale is a sequence of notes played in a specific order, usually going up or down in pitch.</p>
-            <p>The most common scale is the <strong>Major Scale</strong>. It sounds happy and bright.</p>
-            <h3>Example: C Major Scale</h3>
-            <ul>
-                <li>C - D - E - F - G - A - B - C</li>
-                <li>Notice there are no sharps (#) or flats (b) in C Major!</li>
-            </ul>
-        </section>
+<div id="scales" class="content-section">
+<h2>Major Scales</h2>
+<p>A scale is a series of notes arranged in ascending or descending order.</p>
+<h3>C Major Scale Example:</h3>
+<p>C - D - E - F - G - A - B - C</p>
+<p>This scale has no sharps or flats, making it the easiest to learn.</p>
+</div>
 
-        <section id="chords">
-            <h2>Chords</h2>
-            <p>A chord is when you play multiple notes at the same time. Chords provide the harmony for a song.</p>
-            <h3>Common Types:</h3>
-            <ul>
-                <li><strong>Major Chord:</strong> Sounds happy. (e.g., C Major: C + E + G)</li>
-                <li><strong>Minor Chord:</strong> Sounds sad or serious. (e.g., A Minor: A + C + E)</li>
-            </ul>
-        </section>
-    </main>
+<div id="chords" class="content-section">
+<h2>Understanding Chords</h2>
+<p>Chords are formed when multiple notes are played together.</p>
+<ul>
+<li><strong>Major Chords:</strong> Sound bright and happy (Example: C-E-G)</li>
+<li><strong>Minor Chords:</strong> Sound darker and sad (Example: A-C-E)</li>
+</ul>
+</div>
+</div>
 
-    <footer>
-        <p>Made for beginners learning web development</p>
-    </footer>
-<body>
-    <canvas id="bg-canvas"></canvas>
+<div class="footer">
+<p>Created for Web Development Project</p>
+</div>
 
-    <header>
-        <h1>Music Theory Basics</h1>
-    </header>
+<script src="index.js"></script>
 
 
-    <script src="index.js"></script>
 </body>
-
 </html>
